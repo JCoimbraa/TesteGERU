@@ -1,0 +1,28 @@
+package Automacao.Geru;
+
+import static com.jayway.restassured.RestAssured.*;
+import static org.hamcrest.Matchers.*;
+import static com.jayway.restassured.module.jsv.JsonSchemaValidator.*;
+import org.junit.Test;
+
+public class TestesAPI {
+
+		public TestesAPI(){
+			baseURI = "http://dump.getpostman.com/blog/users";
+		}
+
+		@Test
+		public void testCriaUsuario() {
+			String myJson = "{\"username\":\"abhinav\",\"password\": \"abc\"}";
+
+			given()
+			.contentType("application/json")
+			.body(myJson)
+			.when()
+			.post("/")
+			.then()
+			.statusCode(200)
+			.body("message", containsString("Solicitação de Empréstimo criada!"));	 
+		}
+	}
+

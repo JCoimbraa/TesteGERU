@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": " www.urlficticia.com.br/api/v1/emprestimos",
+  "type": "object",
+  "properties": {
+    "id": {
+      "id": "www.urlficticia.com.br/api/v1/emprestimos/<id>",
+      "type": "number"
+    },
+    "token": {
+      "id": "	Endpoint= www.urlficticia.com.br/api/v1/emprestimos",
+      "type": "string"
+    },
+    "username": {
+      "id": "	Endpoint= www.urlficticia.com.br/api/v1/emprestimos/<id>",
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "token",
+    "username"
+  ]
+}
